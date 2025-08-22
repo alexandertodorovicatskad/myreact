@@ -1,2 +1,2 @@
 # myreact
-Learning React.
+Learning React. Will be deleted soon ~ Sep/Oct 2025.
