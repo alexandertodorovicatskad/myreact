@@ -133,6 +133,14 @@ button:focus-visible {
   margin-right: 1rem; /* Adjust spacing as needed */
 }
 
+/* ...existing code... */
+.log-debug {
+  outline: 2px dashed #536993;
+  color: #4c482d !important;
+  background: rgba(224, 127, 71, 0.03);
+  padding: 0.25rem;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
