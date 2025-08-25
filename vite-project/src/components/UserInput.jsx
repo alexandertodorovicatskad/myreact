@@ -1,24 +1,59 @@
-export default function UserInput() {
-  return <section id="user-input">
-    <div className="input-group">
+import { useState } from "react";
+
+export default function UserInput({onChange, userInput}) {
+
+  return (
+    <section id="user-input">
+      <div className="input-group">
         <p>
-            <label htmlFor="investment-amount">Initial Investment Amount</label>
-            <input type="number" id="investment-amount" required />
+          <label>Initial Investment Amount</label>
+          <input
+            type="number"
+            required
+            value={userInput.initialInvestment}
+            onChange={(event) =>
+              onChange("initialInvestment", event.target.value)
+            }
+          />
         </p>
         <p>
-            <label htmlFor="investment-duration">Annual Investment Amount (yearly)</label>
-            <input type="number" id="investment-duration" required />
+          <label>
+            Annual Investment Amount (yearly)
+          </label>
+          <input
+            type="number"
+            required
+            value={userInput.annualInvestment}
+            onChange={(event) =>
+              onChange("annualInvestment", event.target.value)
+            }
+          />
         </p>
-    </div>
-        <div className="input-group">
+      </div>
+      <div className="input-group">
         <p>
-            <label htmlFor="expected-return">Expected Return</label>
-            <input type="number" id="expected-return" required />
+          <label>Expected Return</label>
+          <input
+            type="number"
+            required
+            value={userInput.expectedReturn}
+            onChange={(event) =>
+              onChange("expectedReturn", event.target.value)
+            }
+          />
         </p>
         <p>
-            <label htmlFor="duration">Duration</label>
-            <input type="number" id="duration" required />
+          <label>Duration</label>
+          <input
+            type="number"
+            required
+            value={userInput.duration}
+            onChange={(event) =>
+              onChange("duration", event.target.value)
+            }
+          />
         </p>
-    </div>
-  </section>;
+      </div>
+    </section>
+  );
 }
